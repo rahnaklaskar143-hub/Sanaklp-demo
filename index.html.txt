@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SparkleWash Laundry</title>
+  <meta name="description" content="SparkleWash — Pickup & Delivery Laundry Service" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small custom styles */
+    .hero-bg{
+      background-image: linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1581579183481-7a8f2a3b0f3b?auto=format&fit=crop&w=1400&q=60');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50">
+  <!-- NAV -->
+  <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <img src="logo.jpeg" alt="Logo" class="w-12 h-12 object-cover rounded-full" />
+      <div>
+        <h1 class="text-xl font-semibold">SparkleWash</h1>
+        <p class="text-xs text-gray-500">Pickup · Wash · Deliver</p>
+      </div>
+    </a>
+    <nav class="hidden md:flex gap-6 items-center text-sm">
+      <a href="#services" class="hover:text-indigo-600">Services</a>
+      <a href="#pricing" class="hover:text-indigo-600">Pricing</a>
+      <a href="#how" class="hover:text-indigo-600">How it works</a>
+      <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md shadow hover:opacity-95">Book Pickup</a>
+    </nav>
+    <button class="md:hidden p-2" id="menuBtn">☰</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-bg text-white py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Fast. Clean. Delivered to your door.</h2>
+        <p class="mt-4 text-lg text-gray-100/90">SparkleWash makes laundry effortless — schedule a pickup, choose your preferences, and we’ll return fresh, folded clothes the same or next day.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#contact" class="inline-block bg-white text-indigo-700 px-6 py-3 rounded-lg font-medium shadow">Schedule Pickup</a>
+          <a href="#pricing" class="inline-block border border-white/40 px-6 py-3 rounded-lg">See Pricing</a>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-200">
+          <span class="font-semibold">Service areas:</span> Silchar & surrounding areas · Contactless pickup available
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <!-- image card -->
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg">
+          <img src="https://images.unsplash.com/photo-1581579183481-7a8f2a3b0f3b?auto=format&fit=crop&w=800&q=60" alt="laundry" class="rounded-lg w-full object-cover h-64" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold">Our Services</h3>
+    <p class="text-gray-600 mt-2">Everything from regular washes to delicate care — pick the service that fits your needs.</p>
+
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-semibold">Standard Wash & Fold</h4>
+        <p class="text-sm text-gray-500 mt-2">Quick, reliable washing and neatly folded.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-semibold">Dry Cleaning</h4>
+        <p class="text-sm text-gray-500 mt-2">For suits, dresses, and delicate fabrics.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-semibold">Express Same-Day</h4>
+        <p class="text-sm text-gray-500 mt-2">Pickup & delivery within the same day (conditions apply).</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-semibold">Stain Treatment & Repairs</h4>
+        <p class="text-sm text-gray-500 mt-2">Special care for tough stains and small repairs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="bg-gradient-to-b from-gray-50 to-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-2xl font-bold">Simple Pricing</h3>
+      <p class="text-gray-600 mt-2">Transparent rates — no surprises.</p>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-lg font-semibold">Per Kg Wash</h4>
+          <div class="text-3xl font-bold mt-3">₹40 <span class="text-sm font-normal">/ kg</span></div>
+          <p class="text-sm text-gray-500 mt-2">Includes detergent & standard drying.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow border-2 border-indigo-100">
+          <h4 class="text-lg font-semibold">Wash & Iron</h4>
+          <div class="text-3xl font-bold mt-3">₹55 <span class="text-sm font-normal">/ kg</span></div>
+          <p class="text-sm text-gray-500 mt-2">Best for shirts, trousers, and delicate fabrics.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-lg font-semibold">Dry Cleaning</h4>
+          <div class="text-3xl font-bold mt-3">From ₹120</div>
+          <p class="text-sm text-gray-500 mt-2">Price varies by garment type.</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-gray-500 mt-4">* Add pickup & delivery charge ₹30 per order within city limits.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold">How it works</h3>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <div class="text-4xl">📱</div>
+        <h4 class="mt-4 font-semibold">Book Pickup</h4>
+        <p class="text-sm text-gray-500 mt-2">Choose date, time & service in the form below.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <div class="text-4xl">🧺</div>
+        <h4 class="mt-4 font-semibold">We Clean</h4>
+        <p class="text-sm text-gray-500 mt-2">Thorough wash, stain treatment & quality check.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <div class="text-4xl">🚚</div>
+        <h4 class="mt-4 font-semibold">Delivered</h4>
+        <p class="text-sm text-gray-500 mt-2">Fresh, folded, and on your doorstep.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / BOOKING FORM -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-12">
+    <div class="bg-white p-8 rounded-lg shadow">
+      <h3 class="text-xl font-bold">Book a Pickup</h3>
+      <p class="text-gray-600 mt-2">Fill this quick form and we’ll confirm via phone.</p>
+
+      <form id="bookingForm" class="mt-6 grid grid-cols-1 gap-4">
+        <div>
+          <label class="text-sm font-medium">Full name</label>
+          <input required name="name" id="name" class="mt-1 block w-full border rounded-md p-2" placeholder="Your name" />
+        </div>
+        <div>
+          <label class="text-sm font-medium">Phone</label>
+          <input required name="phone" id="phone" type="tel" class="mt-1 block w-full border rounded-md p-2" placeholder="+91 98765 43210" />
+        </div>
+        <div>
+          <label class="text-sm font-medium">Pickup address</label>
+          <input required name="address" id="address" class="mt-1 block w-full border rounded-md p-2" placeholder="House number, street, area" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium">Pickup date</label>
+            <input required id="date" type="date" class="mt-1 block w-full border rounded-md p-2" />
+          </div>
+          <div>
+            <label class="text-sm font-medium">Service</label>
+            <select id="service" class="mt-1 block w-full border rounded-md p-2">
+              <option>Standard Wash & Fold</option>
+              <option>Wash & Iron</option>
+              <option>Dry Cleaning</option>
+              <option>Express Same-Day</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 mt-2">
+          <label class="text-sm">Estimated weight (kg)</label>
+          <input type="number" id="kg" min="1" value="5" class="w-24 border rounded-md p-2" />
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-md">Confirm Pickup</button>
+          <button type="button" id="clearBtn" class="border px-4 py-2 rounded-md">Clear</button>
+        </div>
+
+        <p id="formMsg" class="text-sm text-green-600"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="max-w-6xl mx-auto px-6 py-8 text-sm text-gray-500">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+      <div>
+        <div class="font-semibold text-gray-800">SparkleWash</div>
+        <div>Silchar, Assam</div>
+        <div class="mt-2">Phone: +91 98765 43210</div>
+      </div>
+      <div class="text-right">
+        <div>© <span id="year"></span> SparkleWash. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('bookingForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        address: document.getElementById('address').value.trim(),
+        date: document.getElementById('date').value,
+        service: document.getElementById('service').value,
+        kg: document.getElementById('kg').value
+      };
+
+      if (!data.name || !data.phone || !data.address || !data.date) {
+        msg.textContent = 'Please fill all required fields.';
+        msg.classList.remove('text-green-600');
+        msg.classList.add('text-red-600');
+        return;
+      }
+
+      // simulate submission: save in localStorage
+      const bookings = JSON.parse(localStorage.getItem('sw_bookings') || '[]');
+      bookings.push(Object.assign({ id: Date.now() }, data));
+      localStorage.setItem('sw_bookings', JSON.stringify(bookings));
+
+      msg.textContent = 'Thanks! Pickup scheduled. We will call to confirm.';
+      msg.classList.remove('text-red-600');
+      msg.classList.add('text-green-600');
+      form.reset();
+      document.getElementById('kg').value = 5;
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      form.reset();
+      document.getElementById('kg').value = 5;
+      msg.textContent = '';
+    });
+
+    // mobile menu quick toggle
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', () => {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
